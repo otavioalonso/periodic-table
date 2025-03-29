@@ -1,5 +1,4 @@
 
-import { TRUE } from 'sass';
 import { radialWavefunction } from '../calcs.js'
 
 import Plot from 'react-plotly.js';
