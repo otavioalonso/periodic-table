@@ -36,6 +36,19 @@ export default () => {
           <div className="ionization">{element.ionizationEnergy && `${element.ionizationEnergy} eV` }</div>
         </div>
       ))}
+      {(selectedElements[0] || selectedElements[1]) && 
+      <>
+      <div style={{
+        position: 'absolute',
+        top: '40px',
+        left: '310px',
+        width: '100px',
+        textAlign: 'center',
+        fontSize: '12px',
+    }}>r²ψ²(r)
+    </div>
+    </>
+      }
       <RadialPlot params={selectedElements} style={{
                 width: '600px',
                 height: '200px',
