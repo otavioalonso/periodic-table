@@ -1,12 +1,12 @@
 .periodic-table {
     display: grid;
-    grid-template-columns: repeat(18, 50px);
+    grid-template-columns: 50px 70px repeat(16, 50px);
     grid-template-rows: repeat(7, 70px) 15px repeat(2, 70px);
     grid-gap: 5px;
     padding: 60px 20px;
     user-select: none;
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1.4;
     font-weight: 400;
 }
 

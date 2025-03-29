@@ -81,20 +81,20 @@ export default () => {
       <div className="sequence" style={{top: 5*75+112,left: 20, width: 105}}><span>6s</span></div>
       <div className="sequence" style={{top: 6*75+112,left: 20, width: 105}}><span>7s</span></div>
       
-      <div className="sequence" style={{top: 3*75+112,left: 130, width: 545}}><span>3d</span></div>
-      <div className="sequence" style={{top: 4*75+112,left: 130, width: 545}}><span>4d</span></div>
-      <div className="sequence" style={{top: 5*75+112,left: 130, width: 545}}><span>5d</span></div>
-      <div className="sequence" style={{top: 6*75+112,left: 130, width: 545}}><span>6d</span></div>
+      <div className="sequence" style={{top: 3*75+112,left: 150, width: 545}}><span>3d</span></div>
+      <div className="sequence" style={{top: 4*75+112,left: 150, width: 545}}><span>4d</span></div>
+      <div className="sequence" style={{top: 5*75+112,left: 150, width: 545}}><span>5d</span></div>
+      <div className="sequence" style={{top: 6*75+112,left: 150, width: 545}}><span>6d</span></div>
 
-      <div className="sequence" style={{top: 1*75+112,left: 680, width: 325}}><span>2p</span></div>
-      <div className="sequence" style={{top: 2*75+112,left: 680, width: 325}}><span>3p</span></div>
-      <div className="sequence" style={{top: 3*75+112,left: 680, width: 325}}><span>4p</span></div>
-      <div className="sequence" style={{top: 4*75+112,left: 680, width: 325}}><span>5p</span></div>
-      <div className="sequence" style={{top: 5*75+112,left: 680, width: 325}}><span>6p</span></div>
-      <div className="sequence" style={{top: 6*75+112,left: 680, width: 325}}><span>7p</span></div>
+      <div className="sequence" style={{top: 1*75+112,left: 700, width: 325}}><span>2p</span></div>
+      <div className="sequence" style={{top: 2*75+112,left: 700, width: 325}}><span>3p</span></div>
+      <div className="sequence" style={{top: 3*75+112,left: 700, width: 325}}><span>4p</span></div>
+      <div className="sequence" style={{top: 4*75+112,left: 700, width: 325}}><span>5p</span></div>
+      <div className="sequence" style={{top: 5*75+112,left: 700, width: 325}}><span>6p</span></div>
+      <div className="sequence" style={{top: 6*75+112,left: 700, width: 325}}><span>7p</span></div>
 
-      <div className="sequence" style={{top: 7*75+112+20,left: 240, width: 765}}><span>4f</span></div>
-      <div className="sequence" style={{top: 8*75+112+20,left: 240, width: 765}}><span>5f</span></div>
+      <div className="sequence" style={{top: 7*75+112+20,left: 150, width: 765}}><span>4f</span></div>
+      <div className="sequence" style={{top: 8*75+112+20,left: 150, width: 765}}><span>5f</span></div>
       {selectedElements[0] && <>
         <Canvas camera={{ position: [-0., -3, 1], fov: 30 }} style={{
             position: 'absolute',
