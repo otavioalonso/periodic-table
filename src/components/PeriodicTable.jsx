@@ -5,8 +5,6 @@ import { elements } from '../elements.js';
 
 import RadialPlot from './RadialPlot.jsx';
 
-
-import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { SphericalHarmonicMesh } from './SphericalHarmonicMesh.jsx'
@@ -38,17 +36,27 @@ export default () => {
       ))}
       {(selectedElements[0] || selectedElements[1]) && 
       <>
-      <div style={{
+      <div className="text" style={{
         position: 'absolute',
-        top: '40px',
-        left: '310px',
+        top: '74px',
+        left: '600px',
         width: '100px',
         textAlign: 'center',
         fontSize: '12px',
     }}>r²ψ²(r)
     </div>
+      <div className="text" style={{
+        position: 'absolute',
+        top: '245px',
+        left: '600px',
+        width: '100px',
+        textAlign: 'center',
+        fontSize: '12px',
+    }}>[r/a₀]
+    </div>
     </>
       }
+      {(selectedElements[0] || selectedElements[1]) && 
       <RadialPlot params={selectedElements} style={{
                 width: '600px',
                 height: '200px',
@@ -57,35 +65,36 @@ export default () => {
                 top: '60px',
                 zIndex: '-1',
             }}/>
-        {!selectedElements[0] && <div params={selectedElements} style={{
+        }
+        {!selectedElements[0] && <div params={selectedElements} className="text" style={{
                 position: 'absolute',
                 left: '340px',
                 top: '160px',
                 textAlign: 'center',
                 zIndex: '-1',
             }}>Select 2 elements</div>}
-      <div className="sequence" style={{top: 0*75+112,left: 20, width: 105}}>1s</div>
-      <div className="sequence" style={{top: 1*75+112,left: 20, width: 105}}>2s</div>
-      <div className="sequence" style={{top: 2*75+112,left: 20, width: 105}}>3s</div>
-      <div className="sequence" style={{top: 3*75+112,left: 20, width: 105}}>4s</div>
-      <div className="sequence" style={{top: 4*75+112,left: 20, width: 105}}>5s</div>
-      <div className="sequence" style={{top: 5*75+112,left: 20, width: 105}}>6s</div>
-      <div className="sequence" style={{top: 6*75+112,left: 20, width: 105}}>7s</div>
+      <div className="sequence" style={{top: 0*75+112,left: 20, width: 105}}><span>1s</span></div>
+      <div className="sequence" style={{top: 1*75+112,left: 20, width: 105}}><span>2s</span></div>
+      <div className="sequence" style={{top: 2*75+112,left: 20, width: 105}}><span>3s</span></div>
+      <div className="sequence" style={{top: 3*75+112,left: 20, width: 105}}><span>4s</span></div>
+      <div className="sequence" style={{top: 4*75+112,left: 20, width: 105}}><span>5s</span></div>
+      <div className="sequence" style={{top: 5*75+112,left: 20, width: 105}}><span>6s</span></div>
+      <div className="sequence" style={{top: 6*75+112,left: 20, width: 105}}><span>7s</span></div>
       
-      <div className="sequence" style={{top: 3*75+112,left: 130, width: 545}}>3d</div>
-      <div className="sequence" style={{top: 4*75+112,left: 130, width: 545}}>4d</div>
-      <div className="sequence" style={{top: 5*75+112,left: 130, width: 545}}>5d</div>
-      <div className="sequence" style={{top: 6*75+112,left: 130, width: 545}}>6d</div>
+      <div className="sequence" style={{top: 3*75+112,left: 130, width: 545}}><span>3d</span></div>
+      <div className="sequence" style={{top: 4*75+112,left: 130, width: 545}}><span>4d</span></div>
+      <div className="sequence" style={{top: 5*75+112,left: 130, width: 545}}><span>5d</span></div>
+      <div className="sequence" style={{top: 6*75+112,left: 130, width: 545}}><span>6d</span></div>
 
-      <div className="sequence" style={{top: 1*75+112,left: 680, width: 325}}>2p</div>
-      <div className="sequence" style={{top: 2*75+112,left: 680, width: 325}}>3p</div>
-      <div className="sequence" style={{top: 3*75+112,left: 680, width: 325}}>4p</div>
-      <div className="sequence" style={{top: 4*75+112,left: 680, width: 325}}>5p</div>
-      <div className="sequence" style={{top: 5*75+112,left: 680, width: 325}}>6p</div>
-      <div className="sequence" style={{top: 6*75+112,left: 680, width: 325}}>7p</div>
+      <div className="sequence" style={{top: 1*75+112,left: 680, width: 325}}><span>2p</span></div>
+      <div className="sequence" style={{top: 2*75+112,left: 680, width: 325}}><span>3p</span></div>
+      <div className="sequence" style={{top: 3*75+112,left: 680, width: 325}}><span>4p</span></div>
+      <div className="sequence" style={{top: 4*75+112,left: 680, width: 325}}><span>5p</span></div>
+      <div className="sequence" style={{top: 5*75+112,left: 680, width: 325}}><span>6p</span></div>
+      <div className="sequence" style={{top: 6*75+112,left: 680, width: 325}}><span>7p</span></div>
 
-      <div className="sequence" style={{top: 7*75+112+20,left: 240, width: 765}}>4f</div>
-      <div className="sequence" style={{top: 8*75+112+20,left: 240, width: 765}}>5f</div>
+      <div className="sequence" style={{top: 7*75+112+20,left: 240, width: 765}}><span>4f</span></div>
+      <div className="sequence" style={{top: 8*75+112+20,left: 240, width: 765}}><span>5f</span></div>
       {selectedElements[0] && <>
         <Canvas camera={{ position: [-0., -3, 1], fov: 30 }} style={{
             position: 'absolute',
@@ -102,7 +111,7 @@ export default () => {
         </SphericalHarmonicMesh>
         <OrbitControls />
         </Canvas>
-        <div style={{
+        <div className="text" style={{
             position: 'absolute',
             top: '110px',
             left: '800px',
@@ -128,7 +137,7 @@ export default () => {
         </SphericalHarmonicMesh>
         <OrbitControls />
         </Canvas>
-        <div style={{
+        <div className="text" style={{
             position: 'absolute',
             top: '110px',
             left: '900px',

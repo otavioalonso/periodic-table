@@ -1,4 +1,5 @@
 
+import { TRUE } from 'sass';
 import { radialWavefunction } from '../calcs.js'
 
 import Plot from 'react-plotly.js';
@@ -15,10 +16,11 @@ const layout = {
     xaxis: {
         zeroline: false,
         showgrid: false,
+        showticklabels: true,
     },
     yaxis: {
         showticklabels: false,
-        zeroline: false,
+        zeroline: true,
         showgrid: false,
     },
     showlegend: true,
@@ -28,14 +30,19 @@ const layout = {
         l: 0,
         r: 0,
         t: 0,
-        b: 0,
+        b: 13,
         pad: 0
+      },
+
+    font: {
+        size: 12,
+        color: '#eee'
       }
 }
 
 export default ({ params, style }) => {
 
-    const rValues = Array.from({ length: 300 }, (_, i) => i * 0.1);
+    const rValues = Array.from({ length: 500 }, (_, i) => i * 0.1);
     
     const data = params.filter(n => n).map((e) => {
         const yValues = rValues.map(r => r * r * Math.pow(radialWavefunction(e.n, e.l, r), 2));
